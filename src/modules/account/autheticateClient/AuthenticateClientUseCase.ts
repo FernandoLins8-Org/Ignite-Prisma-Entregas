@@ -20,12 +20,10 @@ export default class AuthenticateClientUseCase {
     }
 
     const passowrdIsCorrect = await compare(password, client.password)
-
     if (!passowrdIsCorrect) {
       throw new Error('Username or password invalid')
     }
 
-    // Gerar token
     const token = sign({ username }, 'b1e5de809ac479ffaa492037f3f9dfea', {
       subject: client.id,
       expiresIn: '1d'
