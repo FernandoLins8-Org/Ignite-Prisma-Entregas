@@ -7,14 +7,19 @@ interface IUpdateDeliveryman {
 
 export default class UpdateDeliverymanUseCase {
   async execute({ id_delivery, id_deliveryman }: IUpdateDeliveryman) {
-    const delivery = await prisma.delivery.update({
+    const delivery = await prisma.delivery.updateMany({
       where: {
-        id: id_delivery
+        id: id_delivery,
+        id_deliveryman: null
       },
       data: {
         id_deliveryman
       }
     })
+
+    if (delivery.count == 0) {
+      throw new Error('Delivery not found')
+    }
 
     return delivery
   }
