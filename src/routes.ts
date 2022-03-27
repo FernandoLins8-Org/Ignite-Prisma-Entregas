@@ -8,7 +8,7 @@ import CreateDeliveryController from './modules/delivery/useCases/createDelivery
 import ensureAuthenticatedClient from './middlewares/ensureAuthenticatedClient'
 import ensureAuthenticatedDeliveryman from './middlewares/ensureAuthenticatedDeliveryman'
 import FindAvailableDeliveriesController from './modules/delivery/useCases/findAvailableDeliveries/FindAvailableDeliveriesController'
-import UpdateDeliverymanController from './modules/delivery/useCases/UpdateDeliveryman/UpdateDeliverymanController'
+import UpdateDeliverymanController from './modules/delivery/useCases/updateDeliveryman/UpdateDeliverymanController'
 import FindClientDeliveriesController from './modules/client/useCases/findClientDeliveries/FindClientDeliveriesController'
 import FindDeliverymanDeliveriesController from './modules/deliveryman/useCases/findDeliverymanDeliveries/FindDeliverymanDeliveriesController'
 import FinishDeliveryController from './modules/delivery/useCases/finishDelivery/FinishDeliveryController'
