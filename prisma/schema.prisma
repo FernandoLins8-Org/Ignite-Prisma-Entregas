@@ -38,7 +38,7 @@ model Delivery {
   deliveryman Deliveryman? @relation(fields: [id_deliveryman], references: [id])
 
   crated_at DateTime  @default(now())
-  end_at    DateTime?
+  end_date  DateTime?
 
   @@map("delivery")
 }
